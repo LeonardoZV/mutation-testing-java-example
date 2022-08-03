@@ -92,7 +92,7 @@ const someOddFunction = (a: Number, b: Number): Any => {
 }
 ```
 
-### How to implement it?
+## How to implement it?
 
 It's quite simple to implement it in Java.
 
