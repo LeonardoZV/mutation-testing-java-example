@@ -1,4 +1,4 @@
-# Mutant Testing Guide
+# Mutant Testing
 
 This guide has the objective to explain what is mutant testing, it's benefits and how to implement it.
 
