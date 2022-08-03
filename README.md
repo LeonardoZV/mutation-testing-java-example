@@ -100,4 +100,4 @@ const someOddFunction = (a: Number, b: Number): Any => {
 
 ## Example Application
 
-This is a simplified example of a application responsible for updating the balance of a account given a debit ou credit operation.
+This is a simplified example of a application responsible for updating the balance of a account given a debit or credit operation.
