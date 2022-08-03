@@ -102,6 +102,8 @@ const someOddFunction = (a: Number, b: Number): Any => {
 
 This is a simplified example of a application responsible for updating the balance of a account given a debit or credit operation.
 
+The account cannot have a negative balance.
+
 ### Explaining
 
 It's common for new developers to test some blocks of code and forget about others.
