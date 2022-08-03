@@ -22,9 +22,9 @@ If the application tests fail, the mutation will be eliminated. If the applicati
 
 The goal is to kill all mutations.
 
-## Types of Mutation Testing
+## Types of Mutations
 
-Each library that implements mutation testing has it's own mutation types. Here are some popular mutation types:
+Each library that implements mutation testing has it's own mutation types. Here are some popular ones:
 
 ### Arithmetic:
 
