@@ -98,4 +98,6 @@ const someOddFunction = (a: Number, b: Number): Any => {
 * Pitest (Java).
 * Cosmic Ray (Python).
 
-## Example code
+## Example Application
+
+This is a simplified example of a application responsible for updating the balance of a account given a debit ou credit operation.
