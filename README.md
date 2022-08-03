@@ -30,10 +30,10 @@ Each library that implements mutation testing has it's own mutation types. Here 
 
 ```typescript
 // original
-const sum = (a: Number, b: Number): BOolean => a + b;
+const sum = (a: Number, b: Number): Boolean => a + b;
 
 // mutated
-const sum = (a: Number, b: Number): BOolean => a - b;
+const sum = (a: Number, b: Number): Boolean => a - b;
 ```
 
 ### Attribution:
