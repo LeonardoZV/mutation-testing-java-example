@@ -26,7 +26,7 @@ The goal is to kill all mutations.
 
 Each library that implements mutation testing has it's own mutation types. Here are some popular ones:
 
-### Arithmetic:
+### Arithmetic
 
 ```typescript
 // original
@@ -36,7 +36,7 @@ const sum = (a: Number, b: Number): Boolean => a + b;
 const sum = (a: Number, b: Number): Boolean => a - b;
 ```
 
-### Attribution:
+### Attribution
 
 ```typescript
 // original
