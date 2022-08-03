@@ -106,7 +106,7 @@ This is a simplified example of a application responsible for updating the balan
 
 It's common for new developers to test some blocks of code and forget about others.
 
-In this example, the AccountUnitTest.mustCreditSpecifiedValue() and AccountUnitTest.mustDebitSpecifiedValue() tests are the only tests developed.
+In this example, the AccountUnitTest.mustCreditSpecifiedValue() and AccountUnitTest.mustDebitSpecifiedValue() tests are the only tests.
 
 If we execute Code Coverage in this application, it will show that the Account.debit() method isn't fully test covered because the developer forgot to test this snippet:
 
