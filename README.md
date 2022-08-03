@@ -169,7 +169,7 @@ For your surprise, if you reexecute your unit tests and code coverage, you will 
 
 You know realized why mutation testing is so important: To measure if you have enough tests and if your tests have quality!
 
-If you executed the mutation testing before the introduction of the bug, you would be warned of this problem of quality in your tests!
+If you executed the mutation coverage analysis before the introduction of the bug, you would be warned of this problem of quality!
 
 Now, all you have to do is write the AccountUnitTest.mustNotThrowExceptionWhenDebitMakesBalanceZero() test and voilà!
 
