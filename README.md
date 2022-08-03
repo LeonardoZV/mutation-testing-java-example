@@ -28,9 +28,47 @@ Each library that implements mutation testing has it's own mutation types. Here 
 
 ### Arithmetic:
 
+```typescript
+// original
+const sum = (a: Number, b: Number): BOolean => a + b;
+
+// mutated
+const sum = (a: Number, b: Number): BOolean => a - b;
+```
+
 ### Attribution:
 
+```typescript
+// original
+let a = 1;
+let b = 2;
+
+a += b;
+
+// mutated
+let a = 1;
+let b = 2;
+
+a -= b;
+```
+
 ### Conditional
+
+```typescript
+// original
+if (a > b) {
+  // do something
+}
+
+// mutated
+if (true) {
+  // do something
+}
+
+if (false) {
+  // do something
+}
+```
 
 ### Block
 
@@ -39,3 +77,5 @@ Each library that implements mutation testing has it's own mutation types. Here 
 * Stryker (C#, Scala, NodeJS, etc).
 * Pitest (Java).
 * Cosmic Ray (Python).
+
+## Example code
