@@ -101,3 +101,37 @@ const someOddFunction = (a: Number, b: Number): Any => {
 ## Example Application
 
 This is a simplified example of a application responsible for updating the balance of a account given a debit or credit operation.
+
+### Explaining
+
+It's common for new developers to test some blocks of code and forget about others.
+
+In this example the AccountUnitTest.mustCreditSpecifiedValue() and AccountUnitTest.mustDebitSpecifiedValue() tests are among the only tests developed.
+
+If we execute Code Coverage in this application, it will show that the Account.debit() method isn't fully test covered because the developer forgot to test this snippet:
+
+```java
+if (newBalance < 0)
+    throw new BalanceCannotBecomeNegativeException();
+```
+
+Then, the developer will introduce the AccountUnitTest.mustThrowExceptionWhenDebitMakesBalanceNegative() test to validate that condition.
+
+Voilá! Code coverage now shows that 100% of your application code is tested! But is that enough?
+
+Let's test the application functionality and introduce a bug in this snippet of code:
+
+```java
+if (newBalance >= 0)
+    throw new BalanceCannotBecomeNegativeException();
+```
+For your surprise, if you reexecute your unit tests and code coverage, you will see that everything will pass with flying colors!
+
+You know realized why mutation testing is so important: To measure if you have enough tests and if your tests have quality!
+
+If you executed the mutation testing before the introduction of the bug, you would be warned of a problem of your tests!
+
+Now, all you have to do is write the AccountUnitTest.mustNotThrowExceptionWhenDebitMakesBalanceZero() test and voilá!
+
+Tests passed, Code Coverage and Mutation Testing are all 100%!
+
