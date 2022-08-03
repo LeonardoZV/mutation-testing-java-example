@@ -8,7 +8,7 @@ Mutation testing is used to evaluate the quality of existing application tests, 
 
 ## What problem it solves?
 
-The traditional Code Coverage technique measures only how much of the application code is executed by it's tests. It does not verify if the tests are really capable of detecting bugs in the executed code. Therefore it only indentifies code not tested.
+The traditional code coverage technique measures only how much of the application code is executed by it's tests. It does not verify if the tests are really capable of detecting bugs in the executed code. Therefore it only indentifies code not tested.
 
 In the majority of the cases, the written tests are enough to generate 100% of code coverage, but the code can be modified in a way that it's functionality is changed and all the tests still pass.
 
@@ -108,7 +108,7 @@ It's common for new developers to test some blocks of code and forget about othe
 
 In this example, the AccountUnitTest.mustCreditSpecifiedValue() and AccountUnitTest.mustDebitSpecifiedValue() tests are the only tests.
 
-If we execute Code Coverage in this application, it will show that the Account.debit() method isn't fully test covered because the developer forgot to test this snippet:
+If we analyze this application under code coverage, it will show that the Account.debit() method isn't fully covered because the developer forgot to test this snippet:
 
 ```java
 if (newBalance < 0)
@@ -117,9 +117,9 @@ if (newBalance < 0)
 
 Then, the developer will introduce the AccountUnitTest.mustThrowExceptionWhenDebitMakesBalanceNegative() test to validate that condition.
 
-Voilá! Code coverage now shows that 100% of your application code is tested! But is that enough?
+Voilà! Code coverage now shows that 100% of your application code is covered by tests! But is that enough?
 
-Let's test the application functionality and introduce a bug in this snippet of code:
+Let's change the application functionality and introduce a bug in this snippet of code by changing the condition:
 
 ```java
 if (newBalance >= 0)
@@ -129,9 +129,9 @@ For your surprise, if you reexecute your unit tests and code coverage, you will 
 
 You know realized why mutation testing is so important: To measure if you have enough tests and if your tests have quality!
 
-If you executed the mutation testing before the introduction of the bug, you would be warned of a problem of your tests!
+If you executed the mutation testing before the introduction of the bug, you would be warned of this problem of quality in your tests!
 
-Now, all you have to do is write the AccountUnitTest.mustNotThrowExceptionWhenDebitMakesBalanceZero() test and voilá!
+Now, all you have to do is write the AccountUnitTest.mustNotThrowExceptionWhenDebitMakesBalanceZero() test and voilà!
 
-Tests passed, Code Coverage and Mutation Testing are all 100%!
+Tests passed, code coverage and mutation Testing are all 100%!
 
