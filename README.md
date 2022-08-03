@@ -72,6 +72,26 @@ if (false) {
 
 ### Block
 
+```typescript
+// original
+const someOddFunction = (a: Number, b: Number) Any => {
+  if (a > b) {
+    return 'not allowed';
+  }
+  
+  if (a == b) {
+    return true;
+  }
+  
+  return 100;
+);
+
+// mutated
+const someOddFunction = (a: Number, b: Number): Any => {
+  // 
+}
+```
+
 ## Popular Libraries
 
 * Stryker (C#, Scala, NodeJS, etc).
