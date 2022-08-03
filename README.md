@@ -1,4 +1,4 @@
-# Mutant Testing Java Example
+# Mutant Testing Guide
 
 This guide has the objective to explain what is mutant testing, it's benefits and how to implement it.
 
