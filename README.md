@@ -92,6 +92,42 @@ const someOddFunction = (a: Number, b: Number): Any => {
 }
 ```
 
+### How to implement it?
+
+It's quite simple to implement it in Java.
+
+First you need to import the pitest dependencies in the pom.xml:
+
+```
+<dependency>
+  <groupId>org.pitest</groupId>
+  <artifactId>pitest</artifactId>
+  <version>1.9.0</version>
+</dependency>
+```
+
+If you're using JUnit 5, you will also need to import the JUnit 5 pitest plugin:
+
+```
+<plugin>
+  <groupId>org.pitest</groupId>
+  <artifactId>pitest-maven</artifactId>
+  <version>1.9.0</version>
+  <dependencies>
+    <dependency>
+      <groupId>org.pitest</groupId>
+      <artifactId>pitest-junit5-plugin</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+  </dependencies>
+</plugin>
+```
+Now all you have to do is execute the tests with mutation coverage:
+
+```
+clean install test org.pitest:pitest-maven:mutationCoverage -f pom.xml
+```
+
 ## Popular Libraries
 
 * Stryker (C#, Scala, NodeJS, etc).
@@ -104,7 +140,7 @@ This is a simplified example of a application responsible for updating the balan
 
 The account cannot have a negative balance.
 
-### Explaining
+### Hands on
 
 It's common for new developers to test some blocks of code and forget about others.
 
@@ -135,5 +171,4 @@ If you executed the mutation testing before the introduction of the bug, you wou
 
 Now, all you have to do is write the AccountUnitTest.mustNotThrowExceptionWhenDebitMakesBalanceZero() test and voilà!
 
-Tests passed, code coverage and mutation testing are all 100% and your code has the most important thing: quality.
-
+Tests passed, code coverage and mutation coverage are all 100% and your code has the most important thing: quality.
