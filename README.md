@@ -108,7 +108,7 @@ It's common for new developers to test some blocks of code and forget about othe
 
 In this example, the AccountUnitTest.mustCreditSpecifiedValue() and AccountUnitTest.mustDebitSpecifiedValue() tests are the only tests.
 
-If we execute code coverage, it will show that the Account.debit() method isn't fully covered because of this snippet:
+If we execute the code coverage analysis, it will show that the Account.debit() method isn't fully covered because of this snippet:
 
 ```java
 if (newBalance < 0)
