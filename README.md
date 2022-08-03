@@ -128,6 +128,8 @@ Now all you have to do is execute the tests with mutation coverage:
 clean install test org.pitest:pitest-maven:mutationCoverage -f pom.xml
 ```
 
+The tests results can be found inside target/pit-reports/
+
 ## Popular Libraries
 
 * Stryker (C#, Scala, NodeJS, etc).
