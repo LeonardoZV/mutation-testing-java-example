@@ -133,5 +133,5 @@ If you executed the mutation testing before the introduction of the bug, you wou
 
 Now, all you have to do is write the AccountUnitTest.mustNotThrowExceptionWhenDebitMakesBalanceZero() test and voilà!
 
-Tests passed, code coverage and mutation Testing are all 100%!
+Tests passed, code coverage and mutation testing are all 100%!
 
