@@ -1,4 +1,6 @@
-# Getting Started
+# Mutant Testing Java Example
+
+This guide has the objective to explain what is mutant testing, it's benefits and how to implement it.
 
 ### Reference Documentation
 For further reference, please consider the following sections:
