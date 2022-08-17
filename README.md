@@ -96,14 +96,14 @@ const someOddFunction = (a: Number, b: Number): Any => {
 
 It's quite simple to implement it in Java.
 
-First you need to import the pitest dependencies in the pom.xml:
+You need to import the pitest plugin in the pom.xml:
 
 ```
-<dependency>
+<plugin>
   <groupId>org.pitest</groupId>
-  <artifactId>pitest</artifactId>
+  <artifactId>pitest-maven</artifactId>
   <version>1.9.0</version>
-</dependency>
+</plugin>
 ```
 
 If you're using JUnit 5, you will also need to import the JUnit 5 pitest plugin:
@@ -125,7 +125,7 @@ If you're using JUnit 5, you will also need to import the JUnit 5 pitest plugin:
 Now all you have to do is execute the tests with mutation coverage:
 
 ```
-clean install test org.pitest:pitest-maven:mutationCoverage -f pom.xml
+mvn test-compile org.pitest:pitest-maven:mutationCoverage
 ```
 
 The tests results can be found inside target/pit-reports/

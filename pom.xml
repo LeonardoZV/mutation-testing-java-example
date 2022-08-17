@@ -16,6 +16,7 @@
 
 	<properties>
 		<java.version>17</java.version>
+		<pitest.version>1.9.3</pitest.version>
 	</properties>
 
 	<dependencies>
@@ -28,11 +29,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.pitest</groupId>
-			<artifactId>pitest</artifactId>
-			<version>1.9.0</version>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -44,7 +40,12 @@
 			<plugin>
 				<groupId>org.pitest</groupId>
 				<artifactId>pitest-maven</artifactId>
-				<version>1.9.0</version>
+				<version>${pitest.version}</version>
+				<configuration>
+					<outputFormats>
+						<outputFormat>html</outputFormat>
+					</outputFormats>
+				</configuration>
 				<dependencies>
 					<dependency>
 						<groupId>org.pitest</groupId>
