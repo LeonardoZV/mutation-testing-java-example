@@ -32,22 +32,22 @@ public class AccountUnitTest {
 
     }
 
-//    @Test
-//    public void mustThrowExceptionWhenDebitMakesBalanceNegative() {
-//
-//        Account account = new Account(0);
-//
-//        assertThrows(BalanceCannotBecomeNegativeException.class, () -> account.debit(1));
-//
-//    }
-//
-//    @Test
-//    public void mustNotThrowExceptionWhenDebitMakesBalanceZero() {
-//
-//        Account account = new Account(1);
-//
-//        assertDoesNotThrow(() -> account.debit(1));
-//
-//    }
+    @Test
+    public void mustThrowExceptionWhenDebitMakesBalanceNegative() {
+
+        Account account = new Account(0);
+
+        assertThrows(BalanceCannotBecomeNegativeException.class, () -> account.debit(1));
+
+    }
+
+    @Test
+    public void mustNotThrowExceptionWhenDebitMakesBalanceZero() {
+
+        Account account = new Account(1);
+
+        assertDoesNotThrow(() -> account.debit(1));
+
+    }
 
 }
