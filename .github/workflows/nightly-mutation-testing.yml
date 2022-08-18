@@ -17,5 +17,5 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
+    - name: Execute Mutation Testing with Maven
       run: mvn test-compile org.pitest:pitest-maven:mutationCoverage --batch-mode --file pom.xml
