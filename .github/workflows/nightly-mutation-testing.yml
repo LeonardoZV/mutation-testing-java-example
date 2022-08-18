@@ -26,6 +26,7 @@ jobs:
     needs: check_date
     if: ${{ needs.check_date.outputs.should_run == 'true' }}
     runs-on: ubuntu-latest
+    name: Mutation Testing
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 17
