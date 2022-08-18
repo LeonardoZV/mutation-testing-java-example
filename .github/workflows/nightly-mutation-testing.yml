@@ -19,12 +19,11 @@ jobs:
       - id: should_run
         continue-on-error: true
         name: Check latest commit is less than a day
-        if: ${{ github.event_name == 'schedule' }}
         run: test -z $(git rev-list  --after="24 hours"  ${{ github.sha }}) &amp;&amp; echo "::set-output name=should_run::fal
     
   test:
     needs: check_date
-    if: ${{ needs.check_date.outputs.should_run != 'false' }}
+    if: ${{ needs.check_date.outputs.should_run == 'true' }}
     runs-on: ubuntu-latest
     name: Mutation Testing
     steps:
