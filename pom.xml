@@ -45,6 +45,7 @@
 					<outputFormats>
 						<outputFormat>html</outputFormat>
 					</outputFormats>
+					<timestampedReports>false</timestampedReports>
 				</configuration>
 				<dependencies>
 					<dependency>
