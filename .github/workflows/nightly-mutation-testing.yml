@@ -24,7 +24,7 @@ jobs:
     
   test:
     needs: check_date
-    if: ${{ needs.check_date.outputs.should_run == 'true' }}
+    if: ${{ needs.check_date.outputs.should_run != 'false' }}
     runs-on: ubuntu-latest
     name: Mutation Testing
     steps:
