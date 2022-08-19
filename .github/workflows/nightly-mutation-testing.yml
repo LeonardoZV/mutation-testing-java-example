@@ -19,7 +19,7 @@ jobs:
       - id: should_run
         continue-on-error: true
         name: Check latest commit is less than a day
-        run: test -z $(git rev-list  --after="24 hours"  ${{ github.sha }}) &amp;&amp; echo "::set-output name=should_run::fal
+        run: test -z $(git rev-list --after="24 hours" ${{ github.sha }}) && echo "::set-output name=should_run::false"
     
   test:
     needs: check_date
