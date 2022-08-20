@@ -34,7 +34,7 @@ jobs:
       uses: actions/setup-java@v3
       with:
         java-version: '17'
-        distribution: 'temurin'
+        distribution: 'corretto'
         cache: maven
     - name: Execute Tests, Code Coverage, Mutation Testing, Publish Results to Sonar and Quality Gate Analysis
       run: mvn test jacoco:report pitest:mutationCoverage sonar:sonar -Dsonar.host.url=http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/ -Dsonar.login=${{ secrets.SONAR_TOKEN }} -Dsonar.projectKey=LeonardoZV_mutation-testing-java-example -Dsonar.qualitygate.wait --batch-mode --file pom.xml
