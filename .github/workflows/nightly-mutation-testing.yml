@@ -72,7 +72,7 @@ jobs:
       run: echo "The Quality Gate status is ${{ steps.sonarqube-quality-gate-check.outputs.quality-gate-status }}"
     - name: Fail Job when Quality Gate fails
       if: ${{ steps.sonarqube-quality-gate-check.outputs.quality-gate-status }} == "FAILED"
-      uses: actions/github-script@v3
+      uses: actions/github-script@v6
       with:
         script: |
             core.setFailed('QUALITY GATE STATUS: FAILED')
