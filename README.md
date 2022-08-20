@@ -4,7 +4,7 @@ This guide has the objective to explain what is mutation testing, it's benefits 
 
 ## What is it?
 
-Mutation testing is used to evaluate the quality of existing application tests, helping developers to design more and better tests.
+Mutation testing is used to evaluate the quality of existing application tests, helping developers to design better tests.
 
 ## What problem it solves?
 
