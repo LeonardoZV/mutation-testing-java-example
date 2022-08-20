@@ -138,6 +138,7 @@ The tests results can be found inside target/pit-reports/
 
 ## Example Application
 
+![Nightly Mutation Testing](https://github.com/LeonardoZV/mutation-testing-java-example/actions/workflows/nightly-mutation-testing.yml/badge.svg)
 [![Coverage](http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/api/project_badges/measure?project=LeonardoZV_mutation-testing-java-example&metric=coverage&token=d4ebc58f97032ae4650e2421db3aeb3680cbedd8)](http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/dashboard?id=LeonardoZV_mutation-testing-java-example)
 ![Mutation Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/LeonardoZV/e5a4b68734f8ee29d54ecfe7b78b1cfb/raw/mutation-coverage-badge.json)
 [![Quality Gate Status](http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/api/project_badges/measure?project=LeonardoZV_mutation-testing-java-example&metric=alert_status&token=d4ebc58f97032ae4650e2421db3aeb3680cbedd8)](http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/dashboard?id=LeonardoZV_mutation-testing-java-example)
