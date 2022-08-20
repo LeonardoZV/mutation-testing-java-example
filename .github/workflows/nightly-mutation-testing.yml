@@ -1,7 +1,7 @@
 name: Nightly Mutation Testing
 
 on:
-  release:
+#  release:
 #    types: [created]
   schedule:
     - cron: '*/5 * * * *'
