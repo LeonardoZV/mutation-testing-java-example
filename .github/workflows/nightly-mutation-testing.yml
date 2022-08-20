@@ -34,5 +34,5 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Execute Mutation Testing with Maven
+    - name: Execute Tests, Code Coverage, Mutation Testing and Publish Results to Sonar
       run: mvn test jacoco:report pitest:mutationCoverage sonar:sonar -Dsonar.host.url=http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/ -Dsonar.login=${{ secrets.SONAR_TOKEN }} -Dsonar.projectKey=LeonardoZV_mutation-testing-java-example --batch-mode --file pom.xml
