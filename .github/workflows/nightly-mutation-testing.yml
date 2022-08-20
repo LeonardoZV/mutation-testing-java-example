@@ -36,3 +36,12 @@ jobs:
         cache: maven
     - name: Execute Tests, Code Coverage, Mutation Testing and Publish Results to Sonar
       run: mvn test jacoco:report pitest:mutationCoverage sonar:sonar -Dsonar.host.url=http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/ -Dsonar.login=${{ secrets.SONAR_TOKEN }} -Dsonar.projectKey=LeonardoZV_mutation-testing-java-example --batch-mode --file pom.xml
+    - name: Create Mutation Coverage Badge
+      uses: schneegans/dynamic-badges-action@v1.4.0
+      with:
+        auth: ${{ secrets.GIST_SECRET }}
+        gistID: 7a160b6cc33dee79ada141b3ab4271d2
+        filename: mutation-testing.json
+        label: Mutation Testing
+        message: 0%
+        color: red
