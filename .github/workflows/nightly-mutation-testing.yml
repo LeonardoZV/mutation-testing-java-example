@@ -35,7 +35,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Execute Tests, Code Coverage, Mutation Testing and Publish Results to Sonar
-      run: mvn test jacoco:report pitest:mutationCoverage sonar:sonar -Dsonar.host.url=http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/ -Dsonar.login=${{ secrets.SONAR_TOKEN }} -Dsonar.projectKey=LeonardoZV_mutation-testing-java-example --batch-mode --file pom.xml
+      run: mvn test jacoco:report pitest:mutationCoverage sonar:sonar -Dsonar.host.url=http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/ -Dsonar.login=${{ secrets.SONAR_TOKEN }} -Dsonar.projectKey=LeonardoZV_mutation-testing-java-example -Dsonar.qualitygate.wait --batch-mode --file pom.xml
     - name: Get Sonar Mutation Coverage Score
       id: myRequest
       uses: fjogeleit/http-request-action@v1
