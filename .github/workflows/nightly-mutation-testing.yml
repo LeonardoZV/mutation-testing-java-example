@@ -40,8 +40,8 @@ jobs:
       uses: schneegans/dynamic-badges-action@v1.4.0
       with:
         auth: ${{ secrets.GIST_SECRET }}
-        gistID: c6ac7b958688b6190c960adc5e9a7eff
-        filename: mutation-testing.json
+        gistID: e5a4b68734f8ee29d54ecfe7b78b1cfb
+        filename: mutation-testing-badge.json
         label: Mutation Testing
         message: 0%
         color: red
