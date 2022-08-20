@@ -1,6 +1,6 @@
-# Mutant Testing
+# Mutation Testing
 
-This guide has the objective to explain what is mutant testing, it's benefits and how to implement it.
+This guide has the objective to explain what is mutation testing, it's benefits and how to implement it.
 
 ## What is it?
 
