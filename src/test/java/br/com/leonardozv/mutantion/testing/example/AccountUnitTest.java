@@ -10,16 +10,16 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 public class AccountUnitTest {
 
-//    @Test
-//    public void mustCreditSpecifiedValue() {
-//
-//        Account account = new Account(5);
-//
-//        account.credit(1);
-//
-//        assertEquals(6, account.getBalance());
-//
-//    }
+    @Test
+    public void mustCreditSpecifiedValue() {
+
+        Account account = new Account(5);
+
+        account.credit(1);
+
+        assertEquals(6, account.getBalance());
+
+    }
 
     @Test
     public void mustDebitSpecifiedValue() {
