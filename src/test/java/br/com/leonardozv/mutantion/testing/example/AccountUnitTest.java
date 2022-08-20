@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootConfiguration
 @SpringBootTest
-public class AccountUnitTest {
+class AccountUnitTest {
 
     @Test
     public void mustCreditSpecifiedValue() {
