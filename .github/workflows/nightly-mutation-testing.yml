@@ -2,9 +2,9 @@ name: Nightly Mutation Testing
 
 on:
   release:
-    types: [created]
-#  schedule:
-#    - cron: '*/5 * * * *'
+#    types: [created]
+  schedule:
+    - cron: '*/5 * * * *'
 
 jobs:
   check_date:
