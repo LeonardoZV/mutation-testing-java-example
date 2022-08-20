@@ -40,7 +40,7 @@ jobs:
       uses: schneegans/dynamic-badges-action@v1.4.0
       with:
         auth: ${{ secrets.GIST_SECRET }}
-        gistID: 7a160b6cc33dee79ada141b3ab4271d2
+        gistID: c6ac7b958688b6190c960adc5e9a7eff
         filename: mutation-testing.json
         label: Mutation Testing
         message: 0%
