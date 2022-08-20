@@ -36,6 +36,12 @@ jobs:
         cache: maven
     - name: Execute Tests, Code Coverage, Mutation Testing and Publish Results to Sonar
       run: mvn test jacoco:report pitest:mutationCoverage sonar:sonar -Dsonar.host.url=http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/ -Dsonar.login=${{ secrets.SONAR_TOKEN }} -Dsonar.projectKey=LeonardoZV_mutation-testing-java-example --batch-mode --file pom.xml
+    - name: Get Sonar Mutation Coverage
+      id: myRequest
+      uses: fjogeleit/http-request-action@v1
+      with:
+        url: "http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/api/measures/component?component=LeonardoZV_mutation-testing-java-example&metricKeys=dc5_mutationAnalysis_mutations_coverage"
+        method: "GET"
     - name: Create Mutation Coverage Badge
       uses: schneegans/dynamic-badges-action@v1.4.0
       with:
@@ -43,7 +49,7 @@ jobs:
         gistID: e5a4b68734f8ee29d54ecfe7b78b1cfb
         filename: mutation-coverage-badge.json
         label: mutation coverage
-        message: 0%
-        valColorRange: 0
+        message: ${{ fromJson(steps.myRequest.outputs.response).component.measures[0].value }}%
+        valColorRange: ${{ fromJson(steps.myRequest.outputs.response).component.measures[0].value }}
         maxColorRange: 100
         minColorRange: 0
