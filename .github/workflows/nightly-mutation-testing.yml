@@ -42,6 +42,7 @@ jobs:
       with:
         url: "http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/api/measures/component?component=LeonardoZV_mutation-testing-java-example&metricKeys=dc5_mutationAnalysis_mutations_coverage"
         method: "GET"
+        username: ${{ secrets.SONAR_TOKEN }}
     - name: Create Mutation Coverage Badge
       uses: schneegans/dynamic-badges-action@v1.4.0
       with:
