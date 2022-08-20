@@ -39,7 +39,7 @@ jobs:
         cache: maven
     - name: Get the repository name without owner
       run: echo REPOSITORY_NAME=${GITHUB_REPOSITORY#*\/} >> $GITHUB_ENV
-    - name: Execute Tests, Code Coverage, Mutation Testing, Publish Results to Sonar
+    - name: Execute Tests, Code Coverage, Mutation Testing and Publish Results to Sonar
       run: mvn test jacoco:report pitest:mutationCoverage sonar:sonar -Dsonar.host.url=http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/ -Dsonar.login=${{ secrets.SONAR_TOKEN }} -Dsonar.projectKey=${{ github.repository_owner }}_${{ env.REPOSITORY_NAME }} --batch-mode --file pom.xml
     - name: Get Sonar Mutation Coverage Score
       id: sonar_request
@@ -59,14 +59,16 @@ jobs:
         valColorRange: ${{ fromJson(steps.sonar_request.outputs.response).component.measures[0].value }}
         maxColorRange: 100
         minColorRange: 0
-    - name: SonarQube Quality Gate check
+    - name: SonarQube Quality Gate Check
       id: sonarqube-quality-gate-check
       uses: sonarsource/sonarqube-quality-gate-action@v1.0.0
       timeout-minutes: 5
       env:
          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
          SONAR_HOST_URL: "http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/"
-    - name: Fail job when Quality Gate fails
+      with:
+        scanMetadataReportFile: target/sonar/report-task.txt
+    - name: Fail Job when Quality Gate fails
       if: ${{ steps.sonarqube-quality-gate-check.outputs.quality-gate-status }} == "FAILED"
       uses: actions/github-script@v3
       with:
