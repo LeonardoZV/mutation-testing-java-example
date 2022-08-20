@@ -4,7 +4,7 @@ This guide has the objective to explain what is mutation testing, it's benefits 
 
 ## What is it?
 
-Mutation testing is used to evaluate the quality of existing application tests, helping developers to design newer and better tests.
+Mutation testing is used to evaluate the quality of existing application tests, helping developers to design more and better tests.
 
 ## What problem it solves?
 
@@ -167,7 +167,7 @@ if (newBalance >= 0)
 ```
 For your surprise, if you reexecute your unit tests and code coverage, you will see that everything will pass with flying colors!
 
-You know realized why mutation testing is so important: To measure if you have enough tests and if your tests have quality!
+You now realized why mutation testing is so important: To measure if you have enough tests and if your tests have quality!
 
 If you executed the mutation coverage analysis before the introduction of the bug, you would be warned of this problem of quality!
 
