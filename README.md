@@ -4,7 +4,7 @@ This guide has the objective to explain what is mutation testing, it's benefits 
 
 ## What is it?
 
-Mutation testing is used to evaluate the quality of existing application tests, helping developers to design newer and better tests.
+Mutation testing is used to evaluate the quality of existing application tests, helping developers to design better tests.
 
 ## What problem it solves?
 
@@ -138,6 +138,10 @@ The tests results can be found inside target/pit-reports/
 
 ## Example Application
 
+[![Coverage](http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/api/project_badges/measure?project=LeonardoZV_mutation-testing-java-example&metric=coverage&token=d4ebc58f97032ae4650e2421db3aeb3680cbedd8)](http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/dashboard?id=LeonardoZV_mutation-testing-java-example)
+![Mutation Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/LeonardoZV/e5a4b68734f8ee29d54ecfe7b78b1cfb/raw/mutation-coverage-badge.json)
+[![Quality Gate Status](http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/api/project_badges/measure?project=LeonardoZV_mutation-testing-java-example&metric=alert_status&token=d4ebc58f97032ae4650e2421db3aeb3680cbedd8)](http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/dashboard?id=LeonardoZV_mutation-testing-java-example)
+
 This is a simplified example of a application responsible for updating the balance of a account given a debit or credit operation.
 
 The account cannot have a negative balance.
@@ -167,7 +171,7 @@ if (newBalance >= 0)
 ```
 For your surprise, if you reexecute your unit tests and code coverage, you will see that everything will pass with flying colors!
 
-You know realized why mutation testing is so important: To measure if you have enough tests and if your tests have quality!
+You now realized why mutation testing is so important: To measure if you have enough tests and if your tests have quality!
 
 If you executed the mutation coverage analysis before the introduction of the bug, you would be warned of this problem of quality!
 
