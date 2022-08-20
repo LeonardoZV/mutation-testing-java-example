@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class AccountUnitTest {
 
     @Test
-    public void mustCreditSpecifiedValue() {
+    void mustCreditSpecifiedValue() {
 
         Account account = new Account(5);
 
@@ -22,7 +22,7 @@ class AccountUnitTest {
     }
 
     @Test
-    public void mustDebitSpecifiedValue() {
+    void mustDebitSpecifiedValue() {
 
         Account account = new Account(5);
 
@@ -35,7 +35,7 @@ class AccountUnitTest {
     }
 
 //    @Test
-//    public void mustThrowExceptionWhenDebitMakesBalanceNegative() {
+//    void mustThrowExceptionWhenDebitMakesBalanceNegative() {
 //
 //        Account account = new Account(0);
 //
@@ -44,7 +44,7 @@ class AccountUnitTest {
 //    }
 //
 //    @Test
-//    public void mustNotThrowExceptionWhenDebitMakesBalanceZero() {
+//    void mustNotThrowExceptionWhenDebitMakesBalanceZero() {
 //
 //        Account account = new Account(1);
 //
