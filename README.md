@@ -138,9 +138,9 @@ The tests results can be found inside target/pit-reports/
 
 ## Example Application
 
-[![Coverage](http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/api/project_badges/measure?project=LeonardoZV_mutation-testing-java-example&metric=coverage&token=d4ebc58f97032ae4650e2421db3aeb3680cbedd8)](http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/dashboard?id=LeonardoZV_mutation-testing-java-example)
-![Mutation Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/LeonardoZV/e5a4b68734f8ee29d54ecfe7b78b1cfb/raw/mutation-coverage-badge.json)
-[![Quality Gate Status](http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/api/project_badges/measure?project=LeonardoZV_mutation-testing-java-example&metric=alert_status&token=d4ebc58f97032ae4650e2421db3aeb3680cbedd8)](http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/dashboard?id=LeonardoZV_mutation-testing-java-example)
+[![Coverage](http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/api/project_badges/measure?project=LeonardoZV_mutation-testing-java-example&metric=coverage&token=90d6f22728d6337c1aa5fb7ce75109abe05cfa44)](http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/dashboard?id=LeonardoZV_mutation-testing-java-example)
+![Mutation Coverage](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/LeonardoZV/e5a4b68734f8ee29d54ecfe7b78b1cfb/raw/mutation-testing-java-example-mutation-coverage-badge.json)
+[![Quality Gate Status](http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/api/project_badges/measure?project=LeonardoZV_mutation-testing-java-example&metric=alert_status&token=90d6f22728d6337c1aa5fb7ce75109abe05cfa44)](http://leozvasconcellos-sonarqube.eastus.azurecontainer.io:9000/dashboard?id=LeonardoZV_mutation-testing-java-example)
 
 This is a simplified example of a application responsible for updating the balance of a account given a debit or credit operation.
 
