@@ -1,4 +1,4 @@
-package br.com.leonardozv.mutantion.testing.example;
+package br.com.leonardozv.mutation.testing.example;
 
 public class BalanceCannotBecomeNegativeException extends Exception {
 }
